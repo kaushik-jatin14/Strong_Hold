@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .form-container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .form-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #bdbdbd;
+        }
+        .form-field {
+            width: 90%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+        }
+        .form-field::placeholder {
+            color: #888;
+        }
+        .submit-button {
+            width: 80%;
+            padding: 15px;
+            background-color: #d1ff00;
+            color: #121212;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 20px;
+        }
+        .submit-button:hover {
+            background-color: #c4f000;
+        }
+        .submit-button a{
+            text-decoration: none;
+        }
+        .error-message {
+            color: #ff4d4d;
+            font-size: 14px;
+            display: none;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Need Assistance?</h1>
+        <p>Fill out this form and our consultant will get in touch with you to answer your questions or schedule a visit.</p>
+        
+        <div class="error-message" id="error-message">Please fill out all required fields.</div>
+        
+        <input type="text" id="name" class="form-field" placeholder="Enter your full name*" required>
+        <input type="text" id="phone" class="form-field" placeholder="Enter your phone number*" required>
+        <input type="email" id="email" class="form-field" placeholder="Enter your e-mail*" required>
+        <textarea id="message" class="form-field" placeholder="Type your message" rows="4" required></textarea>
+        
+        <button class="submit-button" onclick="validateForm()">Send</button>
+        <button class="submit-button" onclick="validateForm()"><a href="CA3_project.html">HOME</a></button>
+    </div>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const errorMessage = document.getElementById("error-message");
+
+            if (!name || !phone || !email || !message) {
+                errorMessage.style.display = "block";
+            } else {
+                errorMessage.style.display = "none";
+                alert("Form submitted successfully!");
+                
+            }
+        }
+    </script>
+</body>
+</html>

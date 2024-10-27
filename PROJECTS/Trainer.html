@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Trainers</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .trainer-card {
+      background-color: #fff;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .trainer-card:hover {
+      transform: scale(1.05);
+    }
+
+    .trainer-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .trainer-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .trainer-name {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .trainer-specialty {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+    .social-links a {
+      color: #333;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Meet Our Trainers</h1>
+    <p>Professional and certified trainers to guide you.</p>
+  </div>
+
+  <div class="container">
+    <div class="trainer-card">
+      <div class="trainer-image">
+        <img src="trainer1.jpg" alt="Trainer 1">
+      </div>
+      <div class="trainer-content">
+        <h2 class="trainer-name">Davidpeterson</h2>
+        <p class="trainer-specialty">Strength & Conditioning Specialist</p>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trainer-card">
+      <div class="trainer-image">
+        <img src="trainer2.jpg" alt="Trainer 2">
+      </div>
+      <div class="trainer-content">
+        <h2 class="trainer-name">Joseph Miko</h2>
+        <p class="trainer-specialty">Yoga & Pilates Expert</p>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="trainer-card">
+      <div class="trainer-image">
+        <img src="trainer3.jpg" alt="Trainer 3">
+      </div>
+      <div class="trainer-content">
+        <h2 class="trainer-name">John Carter</h2>
+        <p class="trainer-specialty">Cardio & Endurance Coach</p>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>
